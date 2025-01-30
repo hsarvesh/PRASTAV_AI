@@ -1,0 +1,38 @@
+project_planning_task:
+  description: >
+    Plan the project and its current state.
+    Make sure you are planning all the tasks for the project with required resources and deadlines
+  expected_output: >
+    A detailed report with the most relevant information about {requirements} to complete the project with start and end dates and duration
+  agent: project_manager
+  
+project_analysis_task:
+  description: >
+    Analyze the project and define major activities to complete the project.
+    Make sure you find important and relevant information for the project
+  expected_output: >
+    A detailed report with project planned information about the project {topic} with {requirements} to complete the project.
+  background: >
+    This task is performed by the project manager which will analyze and activites suggested by the solution designer. 
+    Provide fesiblity for each activity and consider the resources availability and deadlines
+  agent: solution_designer
+
+praposal_writing_task:
+  description: >
+    Analyze the project and received inputs from other agents.
+    Make sure you are writting a proposal for the project with clear relevant information given
+    do present document in a clear and detailed manner
+  expected_output: >
+    Detailed proposal for the project with required {requirements} to complete the project with required resources and deadlines with complete details of the project which should include project analysis, project planning details, timelines and duration
+    Proposal should be written in order to understand what activities will perform in the project with available different resources
+    It should include all the relevant information related to different activities and allocations which will be required to complete the project
+    at the end of the proposal, it should include the timelines and duration for the project which includes all the activities to complete the project
+    which will desciribe the start and end dates and duration and should incclude worklog level details which can be as granual as possible
+  agent: praposal_writer
+
+finance_Review_task:
+  description: >
+    Review the proposal and make sure it is clear and concise in order to execute from provided funds for this project
+  expected_output: >
+    A detailed report with the most relevant information about {requirements} to complete the project with start and end dates and duration. Include all the planning, solutioning and budgeting details provided in prior tasks and create a itemized budget for the project based on the all the information available.
+  agent: financial_analyst
